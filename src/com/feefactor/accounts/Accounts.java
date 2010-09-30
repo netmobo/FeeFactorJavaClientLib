@@ -221,12 +221,11 @@ public class Accounts extends ServiceBase{
             )
     throws FeefactorCheckedException{
         String subPath = "/plan/schedule/";
-        NameValuePair[] others = new NameValuePair[5];
-        others[0] = new NameValuePair("reason", reason);
-        others[1] = new NameValuePair("mode", reason);
-        others[2] = new NameValuePair("retainEffectivityDate", reason);
-        others[3] = new NameValuePair("retainEndDate", reason);
-        others[4] = new NameValuePair("reason", reason);
+        NameValuePair[] others = new NameValuePair[4];
+        others[0] = new NameValuePair("mode", ""+mode);
+        others[1] = new NameValuePair("retainEffectivityDate", ""+retainEffectivityDate);
+        others[2] = new NameValuePair("retainEndDate", ""+retainEndDate);
+        others[3] = new NameValuePair("reason", reason);
         return insert(basePath+subPath, ap, others);
 	}
     
