@@ -142,7 +142,7 @@ public class Users extends ServiceBase{
 	    others[0] = new NameValuePair("userID", String.valueOf(userID));
 	    others[1] = new NameValuePair("reason", String.valueOf(reason));
 	    
-	    return update(basePath+subPath, Profile.class, others);
+	    return update(basePath+subPath, profile, others);
 	}
     
     public int deleteUserQuestion(
